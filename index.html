@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DM App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <h1>DM App</h1>
+    <p class="tagline">Peace of mind for your internet usage</p>
+
+    <p id="status">Subscription expired</p>
+    <p id="message">Please renew to stay connected</p>
+
+    <div class="card">
+      <p><strong>Remaining Data:</strong> <span id="data">0</span> MB</p>
+      <div class="progress-bar">
+        <div id="dataBar" class="fill"></div>
+      </div>
+
+      <p><strong>Days Left:</strong> <span id="daysLeft">0</span></p>
+      <div class="progress-bar">
+        <div id="daysBar" class="fill"></div>
+      </div>
+
+      <p>
+        <strong>Select Plan:</strong>
+        <select id="planSelect" onchange="updatePlan()">
+          <option value="1">1 Week - ₦300 / 1GB</option>
+          <option value="3">3 Weeks - ₦500 / 3GB</option>
+          <option value="5">5 Weeks - ₦800 / 5GB</option>
+        </select>
+      </p>
+
+      <button onclick="payNow()">Pay Now</button>
+      <button onclick="useData()">Use 100MB Data</button>
+
+      <div class="history">
+        <h3>Usage History</h3>
+        <ul id="historyList"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
